@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keystone Realty — Your First Key Starts Here</title>
+  <meta name="description" content="Keystone Realty helps first-time buyers, renters, and new investors find the right home with clear numbers and honest advice." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔑</text></svg>" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="logo">🔑 Keystone Realty</a>
+    <ul>
+      <li><a href="#features">Why Us</a></li>
+      <li><a href="#calculator">Calculator</a></li>
+      <li><a href="about.html">Our Services</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO: AI-generated video, autoplay + loop ===== -->
+  <header class="hero">
+    <!-- muted + playsinline are required for browsers to allow autoplay -->
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="gemini_generated_video_db18c851.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-content">
+      <span class="eyebrow">Real estate for first-timers</span>
+      <h1>Your first key starts here.</h1>
+      <p>Whether you're renting your first apartment, buying your first home, or making your first investment, Keystone Realty gives you clear numbers, honest advice, and an agent who actually picks up the phone.</p>
+      <div class="btns">
+        <a href="about.html" class="btn">Explore Our Services →</a>
+        <a href="#calculator" class="btn ghost">What Can I Afford?</a>
+      </div>
+    </div>
+    <div class="scroll-hint">⌄</div>
+  </header>
+
+  <!-- ===== Features ===== -->
+  <section id="features">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why Keystone</span>
+      <h2>Real estate, minus the confusion.</h2>
+      <p>Most people only buy a few homes in their life. We make sure the first one doesn't feel like a gamble.</p>
+    </div>
+    <div class="features">
+      <div class="card reveal"><div class="icon">🏡</div><h3>First-Home Program</h3><p>A step-by-step guide from pre-approval to closing day, with a dedicated agent the whole way.</p></div>
+      <div class="card reveal"><div class="icon">🏢</div><h3>Free Rental Search</h3><p>Tell us your budget and move-in date. We send matching apartments within 24 hours — at no cost to you.</p></div>
+      <div class="card reveal"><div class="icon">📈</div><h3>Investor Analysis</h3><p>Cash flow, cap rate, and cash-on-cash return calculated for any property before you commit.</p></div>
+      <div class="card reveal"><div class="icon">💬</div><h3>Answers 24/7</h3><p>Ask Keys, our chat assistant, about mortgages, down payments, or closing costs anytime.</p></div>
+    </div>
+  </section>
+
+  <!-- ===== X-FACTOR: Live mortgage calculator ===== -->
+  <section id="calculator" class="quiz-wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Affordability Calculator</span>
+      <h2>What would my monthly payment be?</h2>
+      <p>Drag the sliders to see your estimated monthly cost update instantly.</p>
+    </div>
+    <div class="calc reveal">
+      <div>
+        <div class="field">
+          <label>Home price <output id="priceOut"></output></label>
+          <input type="range" id="price" min="100000" max="1500000" step="5000" value="350000" />
+        </div>
+        <div class="field">
+          <label>Down payment <output id="downOut"></output></label>
+          <input type="range" id="down" min="3" max="50" step="1" value="10" />
+        </div>
+        <div class="field">
+          <label>Interest rate <output id="rateOut"></output></label>
+          <input type="range" id="rate" min="2" max="10" step="0.125" value="6.5" />
+        </div>
+        <div class="field">
+          <label>Loan term</label>
+          <div class="terms">
+            <button type="button" data-y="15">15 years</button>
+            <button type="button" data-y="30" class="active">30 years</button>
+          </div>
+        </div>
+      </div>
+      <div class="calc-out">
+        <div class="donut" id="donut">
+          <div class="donut-inner"><small>Est. monthly</small><strong id="total">$0</strong></div>
+        </div>
+        <ul class="legend">
+          <li><span><i style="background:#d9a441"></i>Principal &amp; interest</span><b id="pi"></b></li>
+          <li><span><i style="background:#7da7d9"></i>Property tax</span><b id="tax"></b></li>
+          <li><span><i style="background:#e8e2d4"></i>Insurance</span><b id="ins"></b></li>
+          <li><span><i style="background:#c0553a"></i>PMI</span><b id="pmi"></b></li>
+        </ul>
+        <p class="calc-note">Estimates assume 1.1% property tax, $125/mo insurance, and 0.5% PMI under 20% down. Not financial advice.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="reveal">
+      <h2>Like the numbers? Let's find the home.</h2>
+      <a href="about.html#listings" class="btn green">See Featured Listings →</a>
+    </div>
+  </section>
+
+  <!-- ===== X-Factor description (required, under 50 words) ===== -->
+  <section style="padding-top:60px;padding-bottom:20px;">
+    <div class="xfactor-note">
+      <strong>✨ X-Factor: Live Affordability Calculator.</strong>
+      Interactive sliders let visitors adjust home price, down payment, interest rate, and loan term, instantly updating an animated donut chart that breaks down their estimated monthly payment into principal and interest, taxes, insurance, and PMI.
+    </div>
+  </section>
+
+  <footer>© 2026 Keystone Realty · A class project concept · <a href="about.html">Our Services</a></footer>
+
+  <script>
+    // Nav turns solid after scrolling past the hero
+    const nav = document.getElementById("nav");
+    addEventListener("scroll", () => nav.classList.toggle("solid", scrollY > innerHeight * 0.6));
+
+    // Make sure the video starts even if a browser is slow to honor autoplay
+    document.querySelector(".hero video").play().catch(() => {});
+
+    // ---- Mortgage calculator ----
+    const $ = id => document.getElementById(id);
+    const money = n => "$" + Math.round(n).toLocaleString("en-US");
+    let years = 30;
+
+    function calc() {
+      const price = +$("price").value, downPct = +$("down").value, rate = +$("rate").value;
+      const loan = price * (1 - downPct / 100);
+      const r = rate / 100 / 12, n = years * 12;
+      const pi = r ? loan * r / (1 - Math.pow(1 + r, -n)) : loan / n;
+      const tax = price * 0.011 / 12;
+      const ins = 125;
+      const pmi = downPct < 20 ? loan * 0.005 / 12 : 0;
+      const total = pi + tax + ins + pmi;
+
+      $("priceOut").textContent = money(price);
+      $("downOut").textContent = `${downPct}% (${money(price * downPct / 100)})`;
+      $("rateOut").textContent = rate.toFixed(3).replace(/0+$/, "").replace(/\.$/, "") + "%";
+      $("pi").textContent = money(pi); $("tax").textContent = money(tax);
+      $("ins").textContent = money(ins); $("pmi").textContent = money(pmi);
+      $("total").textContent = money(total);
+
+      // Donut chart with conic-gradient
+      const a = pi / total * 360, b = a + tax / total * 360, c = b + ins / total * 360;
+      $("donut").style.background =
+        `conic-gradient(#d9a441 0 ${a}deg, #7da7d9 ${a}deg ${b}deg, #e8e2d4 ${b}deg ${c}deg, #c0553a ${c}deg 360deg)`;
+    }
+    ["price", "down", "rate"].forEach(id => $(id).addEventListener("input", calc));
+    document.querySelectorAll(".terms button").forEach(btn => btn.onclick = () => {
+      document.querySelectorAll(".terms button").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active"); years = +btn.dataset.y; calc();
+    });
+    calc();
+  </script>
+
+  <!-- LAB 3 CHATBOT EMBED: to use your own bot, paste its embed code here and remove the line below -->
+  <script src="chatbot.js"></script>
+</body>
+</html>
